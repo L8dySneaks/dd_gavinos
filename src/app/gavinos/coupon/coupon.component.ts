@@ -13,10 +13,14 @@ export class CouponComponent implements OnInit {
 
   public couponCreated = false;
 
+  public couponStatus: string = 'New';
+
   constructor() {
     setTimeout(() => {
       this.allowNewCoupon = true;
     }, 2000);
+
+    this.couponStatus = Math.random() > 0.5 ? 'New' :  'Last Chance';
   }
 
   ngOnInit() {
@@ -30,6 +34,10 @@ export class CouponComponent implements OnInit {
 
   public onUpdateCoupon(event: Event) {
     this.couponName = (<HTMLInputElement>event.target).value;
+  }
+
+  public getColor() {
+    return this.couponStatus === 'New' ? 'green' : 'red';
   }
 
 }
