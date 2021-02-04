@@ -11,6 +11,8 @@ export class CouponComponent implements OnInit {
   public couponCreationStatus = 'No coupon was created.'
   public couponName = 'Test Coupon';
 
+  public couponCreated = false;
+
   constructor() {
     setTimeout(() => {
       this.allowNewCoupon = true;
@@ -21,7 +23,9 @@ export class CouponComponent implements OnInit {
   }
 
   public onCreateCoupon() {
+    this.couponCreated = true;
     this.couponCreationStatus = 'New coupon created : ' + this.couponName;
+
   }
 
   public onUpdateCoupon(event: Event) {

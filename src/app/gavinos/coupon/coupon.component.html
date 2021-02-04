@@ -2,5 +2,7 @@
 <!-- <input type="text" class="form-control" (input)="onUpdateCoupon($event)"> -->
 <input type="text" class="form-control" [(ngModel)]="couponName">
 <button class="btn btn-primary" [disabled]="!allowNewCoupon" (click)="onCreateCoupon()">Add Coupon</button>
-<p>{{ couponCreationStatus }}</p>
+<!-- <p>{{ couponCreationStatus }}</p> -->
 <!-- <p>{{ couponName }}</p> -->
+<p *ngIf="couponCreated; else noCoupon"> Coupon was created, {{ couponName }}</p>
+<ng-template #noCoupon><p>No coupon was created!</p></ng-template>
