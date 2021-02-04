@@ -15,6 +15,8 @@ export class CouponComponent implements OnInit {
 
   public couponStatus: string = 'New';
 
+  public coupons = ['Pizza Special', 'Hoagie Special', 'Pop Special'];
+
   constructor() {
     setTimeout(() => {
       this.allowNewCoupon = true;
@@ -28,6 +30,7 @@ export class CouponComponent implements OnInit {
 
   public onCreateCoupon() {
     this.couponCreated = true;
+    this.coupons.push(this.couponName);
     this.couponCreationStatus = 'New coupon created : ' + this.couponName;
 
   }
