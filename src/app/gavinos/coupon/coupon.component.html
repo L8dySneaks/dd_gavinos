@@ -1,5 +1,6 @@
 <label>Coupon</label>
-<input type="text" class="form-control" (input)="onUpdateCoupon($event)">
+<!-- <input type="text" class="form-control" (input)="onUpdateCoupon($event)"> -->
+<input type="text" class="form-control" [(ngModel)]="couponName">
 <button class="btn btn-primary" [disabled]="!allowNewCoupon" (click)="onCreateCoupon()">Add Coupon</button>
 <p>{{ couponCreationStatus }}</p>
 <p>{{ couponName }}</p>

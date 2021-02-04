@@ -9,7 +9,7 @@ export class CouponComponent implements OnInit {
 
   public allowNewCoupon = false;
   public couponCreationStatus = 'No coupon was created.'
-  public couponName = '';
+  public couponName = 'Test Coupon';
 
   constructor() {
     setTimeout(() => {
