@@ -10,6 +10,7 @@ import { WarningAlertComponent } from './warning-alert/warning-alert.component';
 import { SuccessAlertComponent } from './success-alert/success-alert.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CouponComponent } from './gavinos/coupon/coupon.component';
+import { AssignmentTwoComponent } from './assignment-two/assignment-two.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { CouponComponent } from './gavinos/coupon/coupon.component';
     ServersComponent,
     WarningAlertComponent,
     SuccessAlertComponent,
-    CouponComponent
+    CouponComponent,
+    AssignmentTwoComponent
   ],
   imports: [
     BrowserModule,

@@ -21,7 +21,7 @@ export class CouponComponent implements OnInit {
   }
 
   public onCreateCoupon() {
-    this.couponCreationStatus = 'New coupon was created';
+    this.couponCreationStatus = 'New coupon created : ' + this.couponName;
   }
 
   public onUpdateCoupon(event: Event) {

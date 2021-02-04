@@ -1,0 +1,7 @@
+<input type="text" class="form-control" [(ngModel)]="username">
+<button class="btn btn-primary" [disabled]="username ===''" (click)="onReset($event)">Reset Username</button>
+<!--
+  could also just reset the username within the click event on the button but setting
+ (click)="username= ''"
+-->
+<p>{{ username }}</p>
