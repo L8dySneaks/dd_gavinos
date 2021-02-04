@@ -4,4 +4,4 @@
 <button class="btn btn-primary" [disabled]="!allowNewCoupon" (click)="onCreateCoupon()">Add Coupon</button>
 <!-- <p>{{ couponCreationStatus }}</p> -->
 <!-- <p>{{ couponName }}</p> -->
-<p [ngStyle]="{backgroundColor: getColor()}" *ngIf="couponCreated"> Coupon was created, {{ couponName }} : {{ couponStatus }}</p>
+<p [ngStyle]="{backgroundColor: getColor()}" [ngClass]="{new: couponStatus === 'New'}" *ngIf="couponCreated"> Coupon was created, {{ couponName }} : {{ couponStatus }}</p>
